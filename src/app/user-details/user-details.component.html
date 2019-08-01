@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h1>Github details user {{singleUser?.name}}</h1>
+  <mat-card>
+    <mat-list role="list">
+      <mat-list-item role="listitem">Id: <span>{{singleUser?.id}}</span></mat-list-item>
+      <mat-list-item role="listitem">Login: <span>{{singleUser?.login}}</span></mat-list-item>
+      <mat-list-item role="listitem">Repositories: <span>{{singleUser?.public_repos}}</span></mat-list-item>
+      <mat-list-item role="listitem">Url: <span>{{singleUser?.url}}</span></mat-list-item>
+    </mat-list>
+    <hr>
+    <button mat-raised-button color="primary" routerLink="/users">Back</button>
+  </mat-card>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<h1>Github list users</h1>
+<ngx-datatable class="material fullscreen"
+               style=""
+               [rows]="rows"
+               [loadingIndicator]="loadingIndicator"
+               [columnMode]="'standart'"
+               [headerHeight]="headerHeight"
+               [footerHeight]="footerHeight"
+               [rowHeight]="rowHeight"
+               (activate)="onActivate($event)">
+  <ngx-datatable-column name="id" [sortable]="false" [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="login" [sortable]="true" [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="url" [sortable]="false" [resizeable]="false"></ngx-datatable-column>
+  <ngx-datatable-footer>
+    <ng-template ngx-datatable-footer-template>
+      <p class="total">Total: <span>{{total}}</span></p>
+      <datatable-pager
+        [pagerLeftArrowIcon]="'datatable-icon-left'"
+        [pagerRightArrowIcon]="'datatable-icon-right'"
+        [pagerPreviousIcon]="'datatable-icon-prev'"
+        [pagerNextIcon]="'datatable-icon-skip'"
+        [size]="pSize"
+        [count]="total"
+        (change)="onPageChanged($event)">
+      </datatable-pager>
+    </ng-template>
+  </ngx-datatable-footer>
+</ngx-datatable>

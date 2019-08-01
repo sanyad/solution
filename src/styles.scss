@@ -1,0 +1,72 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.ngx-datatable {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  &.material {
+    box-shadow: none;
+  }
+}
+.datatable-row-center {
+  grid-template-columns: 0.5fr 1fr 3fr;
+  display: grid !important;
+  width: 100% !important;
+  grid-gap: 15px;
+  align-self: center;
+}
+.datatable-body-row .datatable-row-center,
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {
+  width: 100% !important;
+}
+.datatable-scroll {
+  display: inline-block;
+  width: 100% !important;
+}
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell,
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner,
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+  width: 100% !important;
+  height: 100% !important;
+}
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+  display: flex;
+  align-items: center;
+}
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell,
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell {
+  display: grid !important;
+  padding: 0 !important;
+  align-items: center;
+  grid-gap: 15px;
+}
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+  font: 700 13px Arial, sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+.ngx-datatable.material .datatable-header,
+.ngx-datatable .datatable-body,
+.ngx-datatable.material .datatable-footer {
+  padding: 0 15px;
+}
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell {
+  font: 700 13px Arial, cursive;
+  color: gray;
+}
+h1 {
+  font-family: "Bookman Old Style";
+}
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
+  display: grid !important;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
